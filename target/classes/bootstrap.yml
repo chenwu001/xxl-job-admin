@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: job
+  profiles:
+    active: ${profile:dev}  
+
+server:
+  port: ${port:2311} 
+  
+kj:
+  config:
+    cache-path: ${app_home:.}/config/
+management:
+  endpoints:
+    web:
+      base-path: /ops
+      exposure:
+        include: '*'
